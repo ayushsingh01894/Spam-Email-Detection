@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Spam Detection</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f4f6f9;
+text-align:center;
+margin-top:100px;
+}
+
+h1{
+color:#333;
+}
+
+input{
+width:400px;
+padding:12px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+padding:10px 25px;
+background:#007BFF;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+.result{
+font-size:22px;
+margin-top:20px;
+font-weight:bold;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Email Spam Detection</h1>
+
+<form action="/predict" method="POST">
+
+<input type="text" name="message" placeholder="Enter message">
+
+<br><br>
+
+<button type="submit">Check Message</button>
+
+
+</form>
+<div class="result">
+Result: {{prediction}}
+</div>
+
+</body>
+
+</html>
